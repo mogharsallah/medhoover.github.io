@@ -7,8 +7,7 @@
   "scripts": {
     "start": "parcel serve watch index.html --port 8081",
     "prettify": "prettier --write ./src",
-    "prebuild": "del ./dist",
-    "build": "parcel build index.html --no-source-maps"
+    "build": "parcel build src/index.html -d . --no-source-maps"
   },
   "dependencies": {
     "grommet": "^2.16.2",
