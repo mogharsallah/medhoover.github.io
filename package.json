@@ -8,7 +8,8 @@
     "start": "parcel serve watch index.html --port 8081",
     "prettify": "prettier --write ./src",
     "prebuild": "del ./docs",
-    "build": "parcel build src/index.html -d ./docs --no-source-maps"
+    "build": "parcel build src/index.html -d ./docs --no-source-maps",
+    "postbuild": "cpy CNAME ./docs"
   },
   "dependencies": {
     "grommet": "^2.16.2",
@@ -17,6 +18,7 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "cpy-cli": "3.1.1",
     "cssnano": "^4.1.10",
     "del-cli": "3.0.1",
     "prettier": "2.2.1",

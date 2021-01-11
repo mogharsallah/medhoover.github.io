@@ -60,9 +60,6 @@ const App = () => {
                 <Anchor href="#profile" color="dark-1">
                   Profile
                 </Anchor>
-                <Anchor href="#work" color="dark-1">
-                  Work
-                </Anchor>
                 <Anchor href="#hire" color="dark-1">
                   Hire
                 </Anchor>
