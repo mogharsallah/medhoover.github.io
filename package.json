@@ -1,0 +1,25 @@
+{
+  "name": "medhoover.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:medhoover/medhoover.github.io.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel serve watch index.html --port 8081",
+    "prettify": "prettier --write ./src",
+    "prebuild": "del ./dist",
+    "build": "parcel build index.html --no-source-maps"
+  },
+  "dependencies": {
+    "grommet": "^2.16.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "del-cli": "3.0.1",
+    "prettier": "2.2.1",
+    "typescript": "^4.1.3"
+  }
+}

@@ -1,0 +1,44 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  z-index: 100;
+  position: fixed;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.page-height {
+  min-height: fit-content !important;
+  height: calc(100vh - 72px);
+}
+
+.shuffle-animation {
+  animation: text-animate var(--duration) linear infinite;
+}
+
+@keyframes text-animate {
+  0%,
+  100% {
+    filter: blur(6px);
+  }
+
+  5%,
+  95% {
+    filter: blur(0px);
+  }
+}
