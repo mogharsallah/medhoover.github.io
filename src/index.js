@@ -113,7 +113,7 @@ const App = () => {
                       </Paragraph>
                       <Box pad={{ top: 'small' }} direction="row">
                         <Anchor target="_blanc" color="dark-1" href={resume}>
-                          Check my Resume
+                          👉🏻 Check my Resume
                         </Anchor>
                       </Box>
                     </Box>
