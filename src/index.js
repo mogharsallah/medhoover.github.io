@@ -112,7 +112,7 @@ const App = () => {
                         undergoing.
                       </Paragraph>
                       <Box pad={{ top: 'small' }} direction="row">
-                        <Anchor target="_blanc" color="dark-1" href={resume}>
+                        <Anchor target="_blanc" color="dark-2" href={resume}>
                           👉🏻 Check my Resume
                         </Anchor>
                       </Box>
@@ -127,11 +127,11 @@ const App = () => {
                 <Heading level="1">Can do! How can I be of help?</Heading>
                 <Box pad={{ top: 'medium' }}>
                   <Text color="dark-3">
-                    Send me an email on: <Anchor label="hire@gharsallah.com" href="mailto:hire@gharsallah.com" />
+                    Send me an email on: <Anchor color="dark-2" label="hire@gharsallah.com" href="mailto:hire@gharsallah.com" />
                   </Text>
                   <Text color="dark-3">
                     Or drop a message on:&nbsp;
-                    <Anchor label="linkedIn.com/in/gharsallah-m" href="https://www.linkedin.com/in/gharsallah-m/" />
+                    <Anchor color="dark-2" label="linkedIn.com/in/gharsallah-m" href="https://www.linkedin.com/in/gharsallah-m/" />
                   </Text>
                 </Box>
               </Box>
