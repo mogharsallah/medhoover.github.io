@@ -5,11 +5,11 @@
   "repository": "git@github.com:medhoover/medhoover.github.io.git",
   "license": "MIT",
   "scripts": {
-    "start": "parcel serve watch index.html --port 8081",
-    "prettify": "prettier --write ./src",
-    "prebuild": "del ./docs",
-    "build": "parcel build src/index.html -d ./docs --no-source-maps",
-    "postbuild": "cpy CNAME ./docs"
+    "start": "parcel serve watch src/index.html --port 8081",
+    "prettify": "prettier --write src",
+    "prebuild": "del docs",
+    "build": "parcel build src/index.html -d docs --no-source-maps",
+    "postbuild": "cpy CNAME docs"
   },
   "dependencies": {
     "grommet": "^2.16.2",
