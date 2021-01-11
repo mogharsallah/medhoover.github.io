@@ -75,8 +75,8 @@ const App = () => {
               <div id="profile"></div>
               <Box justify="center" pad={{ top: 'xlarge', bottom: 'large' }} className="page-height">
                 <Box animation="slideDown" align="start" justify="center" direction={size !== 'small' ? 'row' : 'column'} gap="large" wrap>
-                  <Box width="200px" gap="medium" align="center">
-                    <Avatar key="profile" size="300px" src={profilePic} round="medium" />
+                  <Box width="218px" gap="medium" align="center">
+                    <Avatar key="profile" size="328px" src={profilePic} round="medium" />
                     <Box direction="row" gap="medium">
                       <a target="_blank" href="https://www.linkedin.com/in/gharsallah-m/">
                         <Avatar key="linkedIn" size="24px" round={false} src={linkedInIcon} />
