@@ -36,7 +36,7 @@ const App = () => {
       <ResponsiveContext.Consumer>
         {(size) => (
           <>
-            <Header size="medium" pad="medium" className="header" justify={size === 'small' ? 'center' : "between"}>
+            <Header size="medium" pad="medium" className="header" justify={size === 'small' ? 'center' : 'between'}>
               {size !== 'small' && <Heading level="4">Mohamed Gharsallah</Heading>}
               <Box direction="row" gap="medium">
                 <Anchor href="#profile" color="dark-1">
