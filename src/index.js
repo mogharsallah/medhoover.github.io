@@ -94,8 +94,8 @@ const App = () => {
                         undergoing.
                       </Paragraph>
                       <Box pad={{ top: 'small' }} direction="row">
-                        <Anchor target="_blanc" color="dark-2" href={resume}>
-                          👉🏻 Check my Resume
+                        <Anchor target="_blanc" color="neutral-3" href={resume}>
+                          👉🏻 Resume
                         </Anchor>
                       </Box>
                     </Box>
