@@ -9,27 +9,6 @@ const linkedInIcon = require('./img/linkedin.png')
 const twitterIcon = require('./img/twitter.png')
 const resume = require('./CV_Mohamed_Gharsallah.pdf')
 
-const WordShuffle = ({ words }) => {
-  const duration = 3000
-  const [wordIndex, setWordIndex] = useState(0)
-  const interval = useRef(null)
-  useEffect(() => {
-    interval.current = setTimeout(() => {
-      setWordIndex(wordIndex < words.length - 1 ? wordIndex + 1 : 0)
-    }, duration)
-
-    return () => {
-      clearInterval(interval.current)
-    }
-  }, [wordIndex])
-
-  return (
-    <span key={words[wordIndex]} className="shuffle-animation" style={{ '--duration': `${duration / 1000}s` }}>
-      {words[wordIndex]}
-    </span>
-  )
-}
-
 const App = () => {
   return (
     <Grommet theme={grommet}>
@@ -103,10 +82,7 @@ const App = () => {
                 </Box>
               </Box>
               <Box id="hire" animation="slideDown" pad="large" justify="center" className="page-height">
-                <Heading style={{ maxWidth: '100%' }} color="dark-3" level="2">
-                  <WordShuffle words={['E-commerce solution', 'Api', 'Mobile app', 'Business platform']} />
-                </Heading>
-                <Heading level="1">Can do! How can I be of help?</Heading>
+                <Heading level="1">How can I be of help?</Heading>
                 <Box pad={{ top: 'medium' }}>
                   <Text color="dark-3">
                     Send me an email on: <Anchor color="dark-2" label="hire@gharsallah.com" href="mailto:hire@gharsallah.com" />
