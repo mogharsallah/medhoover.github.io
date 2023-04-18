@@ -1,13 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { Anchor, grommet, Grommet, Header, Heading, Box, Main, Avatar, Paragraph, ResponsiveContext, Text } from 'grommet'
 
-const profilePic = require('./img/mo.jpeg')
-const githubIcon = require('./img/github.png')
-const instagramIcon = require('./img/instagram.png')
-const linkedInIcon = require('./img/linkedin.png')
-const twitterIcon = require('./img/twitter.png')
-const resume = require('./CV_Mohamed_Gharsallah.pdf')
+import profilePicture from './img/mo.jpeg'
+import githubIcon from './img/github.png'
+import linkedInIcon from './img/linkedin.png'
+import resume from './CV_Mohamed_Gharsallah.pdf'
 
 const App = () => {
   return (
@@ -15,7 +12,7 @@ const App = () => {
       <ResponsiveContext.Consumer>
         {(size) => (
           <>
-            <Header size="medium" pad="medium" className="header" justify={size === 'small' ? 'center' : 'between'}>
+            <Header pad="medium" className="header" justify={size === 'small' ? 'center' : 'between'}>
               {size !== 'small' && <Heading level="4">Mohamed Gharsallah</Heading>}
               <Box direction="row" gap="medium">
                 <Anchor href="#profile" color="dark-1">
@@ -37,19 +34,13 @@ const App = () => {
               <Box justify="center" pad={{ top: 'xlarge', bottom: 'large' }} className="page-height">
                 <Box animation="slideDown" align="start" justify="center" direction={size === 'small' ? 'column' : 'row'} gap="large">
                   <Box width="218px" gap="medium" align="center" pad={{ bottom: 'medium' }}>
-                    <Avatar key="profile" size="328px" src={profilePic} round="medium" />
+                    <Avatar key="profile" size="328px" src={profilePicture} round="medium" />
                     <Box direction="row" gap="medium">
                       <a target="_blank" href="https://www.linkedin.com/in/gharsallah-m/">
                         <Avatar key="linkedIn" size="24px" round={false} src={linkedInIcon} />
                       </a>
                       <a target="_blank" href="https://github.com/medhoover">
                         <Avatar key="github" size="24px" round={false} src={githubIcon} />
-                      </a>
-                      <a target="_blank" href="https://twitter.com/mo_gharsallah">
-                        <Avatar key="twitter" size="24px" round={false} src={twitterIcon} />
-                      </a>
-                      <a target="_blank" href="https://www.instagram.com/med.gharsalla/">
-                        <Avatar key="instagram" size="24px" round={false} src={instagramIcon} />
                       </a>
                     </Box>
                   </Box>
@@ -85,7 +76,7 @@ const App = () => {
                 <Heading level="1">How can I be of help?</Heading>
                 <Box pad={{ top: 'medium' }}>
                   <Text color="dark-3">
-                    Send me an email on: <Anchor color="dark-2" label="hire@gharsallah.com" href="mailto:hire@gharsallah.com" />
+                    Send me an email on: <Anchor color="dark-2" label="mohamed@gharsallah.com" href="mailto:mohamed@gharsallah.com" />
                   </Text>
                   <Text color="dark-3">
                     Or drop a message on:&nbsp;
@@ -101,4 +92,9 @@ const App = () => {
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const domNode = document.getElementById('root')
+
+if (domNode) {
+  const root = createRoot(domNode)
+  root.render(<App />)
+}
